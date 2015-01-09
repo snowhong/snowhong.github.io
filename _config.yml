@@ -84,8 +84,8 @@ JB :
   #
   comments :
     provider : disqus
-    disqus :
-      short_name : Snowhong
+    disqus : 
+      short_name : SnowHong
     livefyre :
       site_id : 123
     intensedebate :
