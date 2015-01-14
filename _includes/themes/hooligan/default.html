@@ -1,36 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>
-      {% if page.title %}
-        {{ page.title }} - 
-      {% endif %}
-      {{ site.title }}
-    </title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}/css-social-buttons/css/zocial.stripped.css">
-    <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-
-    <!-- fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
-  </head>
+  {% include themes/hooligan/header.html %}
 
   <body>
     <div id="page-wrap">
@@ -44,6 +15,7 @@
               <span class="icon-bar"></span>
             </a>
 
+			<!--这里是左上角的标题-->
             <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
 
             <div class="nav-collapse">
@@ -111,14 +83,7 @@
       <div class="footer-push"></div>
     </div><!--/.page-wrap -->
 
-    <footer>
-      <div class="container">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
-        </p>
-      </div>
-    </footer>
+    {% include themes/hooligan/footer.html %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>

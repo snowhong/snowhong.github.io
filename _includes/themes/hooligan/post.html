@@ -1,3 +1,4 @@
+<!--post文章的标题附带有tagline小的后缀-->
 <div class="page-header">
   <h1>
     {{ page.title }} 
@@ -9,7 +10,9 @@
 
 <div class="row">
   <div class="span8">
+	<!--post内容正文替换的地方-->
     {{ content }}
+	<!--水平分割线1-->
     <hr>
     <div class="pagination btn-group">
       {% if page.previous %}
@@ -24,14 +27,16 @@
         <a class="btn next disabled">Next &rarr;</a>
       {% endif %}
     </div>
+	<!--水平分割线2-->
     <hr>
     {% include JB/comments %}
   </div>
   
+  <!--右边侧边的内容-->
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
+	  <div class="date"><span><i>{{ page.date | date_to_long_string }}</i></span></div>
     </section>
     {% if page.category %}
       <section>
