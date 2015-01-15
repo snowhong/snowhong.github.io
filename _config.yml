@@ -13,12 +13,13 @@ title : Snow Hong
 tagline: Site Tagline
 author :
   name : Hong Snow
-  email : 
-  gitcafe :
+  email : test
+  gitcafe : test
   github : snowhong
   googleplus: snowhong
-  weibo :
-  twitter :
+  weibo : test
+  twitter : test
+  linkedin: test
 
 JB :
   version : 0.3.0
@@ -41,7 +42,7 @@ JB :
   rss_path : /rss.xml
 
   comments :
-    provider : disqus
+    provider : false
     disqus : 
       short_name : SnowHong
     livefyre :
