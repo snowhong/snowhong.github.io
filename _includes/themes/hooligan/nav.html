@@ -9,6 +9,7 @@
         		    <span class="icon-bar"></span>
         		</a>
                 <a href="{{HOME_PATH}}" class="brand {% if page.url == '/index.html' %}selected{% endif %}">❉SNOW HONG</a>
+                
         	</div>
 
 		<div class="collapse nav-collapse">
@@ -22,6 +23,9 @@
                 <li>
                 	<a href="/tags.html" class="{% if page.url == '/tags.html' %}selected{% endif %}">TAGS</a>
                 </li>
+                <form class="navbar-search">
+                    <input type="text" class="search-query" placeholder="Search">
+                </form>
                 <!--
 				{% assign pages_list = site.pages %}
 				{% assign group = 'navigation' %} 

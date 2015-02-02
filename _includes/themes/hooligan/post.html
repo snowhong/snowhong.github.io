@@ -11,17 +11,24 @@
     {{ content }}
     <hr>
     <div class="pagination btn-group">
+    <ul>
       {% if page.previous %}
-        <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
+        <!--a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a-->
+        <li><a href="{{ BASE_PATH }}{{ page.previous.url }}">&larr; Previous</a></li>
       {% else %}
-        <a class="btn disabled prev">&larr; Previous</a>
+        <!--a class="btn disabled prev">&larr; Previous</a-->
+        <li><a class="disabled">&larr; Previous</a></li>
       {% endif %}
-        <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+        <!--a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a-->
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
       {% if page.next %}
-        <a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
+        <!--a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a-->
+        <li><a href="{{ BASE_PATH }}{{ page.next.url }}">Next &rarr;</a></li>
       {% else %}
-        <a class="btn next disabled">Next &rarr;</a>
+        <!--a class="btn next disabled">Next &rarr;</a-->
+        <li><a class="disabled">Next &rarr;</a></li>
       {% endif %}
+      </ul>
     </div>
     <hr>
     {% include JB/comments %}

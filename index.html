@@ -1,12 +1,11 @@
 ---
 layout:	default
 title: "❉ Snow Hong's Blog"
-tagline:
+tagline: 
 
 ---
+
 {% include JB/setup %}
-
-
 <div class="row">
 	<div class="span8">
 		{% for post in paginator.posts %}
@@ -16,20 +15,17 @@ tagline:
 		{% else %}
 		{{ post.content | strip_html | truncatewords:10 }}
 		{% endif %}
-		<hr>
 		{% endfor %}
+		<hr>
 
-		<!-- Pagination links -->	
+		<!-- Pagination links -->
 		{% if paginator.previous_page %}
 		{% if paginator.previous_page == 1 %}
-		<a class="btn btn-primary btn-sm" href="/">Home</a>
 		<a class="btn btn-primary btn-sm" href="/">&laquo; Prev</a>
 		{% else %}
-		<a class="btn btn-primary btn-sm" href="/">Home</a>
 		<a class="btn btn-primary btn-sm" href="/page{{paginator.previous_page}}/">&laquo; Prev</a>
 		{% endif %}
 		{% else %}
-		<span><a class="btn btn-primary btn-sm disabled" href="/">Home</a></span>
 		<span><a class="btn btn-primary btn-sm disabled">&laquo; Prev</a></span>
 		{% endif %}
 		<span><a class="btn btn-primary btn-sm disabled">Page: {{paginator.page}} of {{paginator.total_pages}}</a></span>
@@ -46,6 +42,3 @@ tagline:
 
 	</div>
 </div>
-
-
-

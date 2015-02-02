@@ -1,7 +1,6 @@
 .selected {
   color: #81D425 !important;
 }
-
 .row{
   margin-left: 0px;
 }
@@ -39,6 +38,7 @@
   .navbar-custom .nav li a:focus {
     color: rgba(255, 255, 255, 0.8);
   }
+
 }
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
@@ -57,7 +57,7 @@
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -41px;
+    top: -44px;
     background-color: rgba(255,255, 255, 0.9);
     /*border-bottom: 1px solid #f2f2f2;*/
     -webkit-transition: -webkit-transform 0.3s;
@@ -74,9 +74,16 @@
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
+  .navbar.is-fixed a {
+    color: #404040;
+  }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: #81D425;
+  }
+  .navbar.is-fixed a:hover,
+  .navbar.is-fixed a:focus {
+    color: #81D425;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -86,4 +93,13 @@
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+}
+.navbar .brand {
+  margin-left: 0px !important;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+.navbar a:hover,
+.navbar a:focus {
+  color: rgba(255, 255, 255, 0.8);
 }
